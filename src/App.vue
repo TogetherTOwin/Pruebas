@@ -1,12 +1,33 @@
+
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+                 
+      
+      <router-link to="/">Login</router-link> |
+      <!-- Ruta de Servicios  -->      
+      <router-link to="/home">Home</router-link> 
+      <!-- <router-link to="/servicios">Services</router-link>  -->
+    
+      <!-- Carrusel en todas las paginas  -->
+      <top-banner></top-banner>
+    
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import TopBanner from "@/components/TopBanner.vue";
+
+export default {  
+  components:{
+    TopBanner
+  }
+  
+}
+</script>
+
 
 <style>
 #app {
